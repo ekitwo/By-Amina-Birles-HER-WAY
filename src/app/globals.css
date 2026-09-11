@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Ground */
+    --background: 40 27% 97%; /* warm ivory */
+    --foreground: 30 12% 13%; /* ink charcoal */
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 12% 13%;
+
+    --muted: 33 16% 93%;
+    --muted-foreground: 30 8% 42%;
+
+    --border: 32 14% 88%;
+    --input: 32 14% 88%;
+    --ring: 32 24% 45%;
+
+    /* Quiet premium accent — muted bronze/clay. Used for meaning, not decoration. */
+    --accent: 32 30% 42%;
+    --accent-foreground: 40 27% 97%;
+    --accent-soft: 33 40% 92%;
+
+    --ink: 30 12% 13%;
+    --ink-soft: 30 8% 34%;
+
+    --success: 130 14% 38%;
+    --warning: 28 45% 48%;
+    --danger: 6 40% 42%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
